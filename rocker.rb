@@ -9,7 +9,7 @@ class Rocker < Formula
 
   def install
     ENV["GOPATH"] = "#{Dir.pwd}/vendor:#{Dir.pwd}"
-    system "make", "local_binary"
+    system "make", "binary"
     bin.install "bin/rocker"
   end
 
