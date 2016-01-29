@@ -8,9 +8,12 @@ class Rocker < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = "#{Dir.pwd}/vendor:#{Dir.pwd}"
-    system "make", "default"
-    bin.install "./rocker"
+    ENV["GOPATH"] = "#{Dir.pwd}/build"
+    ENV["GO15VENDOREXPERIMENT"] = "1"
+    system "mkdir -p build/src/github.com/grammarly"
+    system "ln -s `pwd` build/src/github.com/grammarly/rocker"
+    system "cd ./build/src/github.com/grammarly/rocker && go install "
+    bin.install "build/bin/rocker"
   end
 
   test do
