@@ -1,9 +1,9 @@
 class Rocker < Formula
   desc "Rocker breaks the limits of Dockerfile."
   homepage "https://github.com/grammarly/rocker"
-  url "https://github.com/grammarly/rocker.git", :tag => "1.1.0"
+  url "https://github.com/grammarly/rocker.git", :tag => "1.1.1"
   head "https://github.com/grammarly/rocker.git"
-  version "1.1.0"
+  version "1.1.1"
 
   depends_on "go" => :build
 
