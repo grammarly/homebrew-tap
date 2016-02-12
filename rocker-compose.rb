@@ -1,9 +1,9 @@
 class RockerCompose < Formula
   desc "Docker tool for deploying apps composed of multiple containers."
   homepage "https://github.com/grammarly/rocker-compose"
-  url "https://github.com/grammarly/rocker-compose.git", :tag => "0.1.4"
+  url "https://github.com/grammarly/rocker-compose.git", :tag => "0.1.5"
   head "https://github.com/grammarly/rocker-compose.git"
-  version "0.1.4"
+  version "0.1.5"
 
   depends_on "go" => :build
 
